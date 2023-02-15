@@ -149,6 +149,15 @@ sap.ui.define([
 				oResourceBundle.getText("shareSendEmailObjectSubject", [sObjectId]));
 				oViewModel.setProperty("/shareSendEmailMessage",
 				oResourceBundle.getText("shareSendEmailObjectMessage", [sObjectName, sObjectId, location.href]));
+			},
+			
+			EH_buttPress  : function ()
+			{
+				var v_i18nMdl		= this.getOwnerComponent().getModel("i18n");
+				var v_i18nPrptFile	= v_i18nMdl.getResourceBundle();
+				var v_msgText		=v_i18nPrptFile.getText("theText");	
+				
+				sap.m.MessageBox.success( v_msgText );
 			}
 
 		});

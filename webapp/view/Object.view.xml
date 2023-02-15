@@ -1,6 +1,10 @@
 <mvc:View
 	controllerName="phoenix.zfr_nb_i18n_13.controller.Object"
 	xmlns="sap.m"
+	xmlns:core = "sap.ui.core"
+	xmlns:layout = "sap.ui.layout"
+	xmlns:form = "sap.ui.layout.form" 
+	xmlns:unified = "sap.ui.unified"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:semantic="sap.f.semantic"
 	xmlns:footerbar="sap.ushell.ui.footerbar">
@@ -17,7 +21,13 @@
 		</semantic:titleHeading>
 
 		<semantic:headerContent>
-
+			<form:SimpleForm  layout = "ResponsiveGridLayout"  >
+				<Label  text = "{i18n>abtphx}"  textDirection = "RTL"  design = "Bold"  />
+				<Text  text = "{i18n>phx}"  width = "250px"  />
+				
+				<Label  text = ""  />
+				<Button  text = "{i18n>justa}"  width = "250px"  type = "Emphasized" press = "EH_buttPress"  />
+			</form:SimpleForm>			
 		</semantic:headerContent>
 
 		<semantic:sendEmailAction>
